@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  gitolite:
+    image: harobed/gitolite:latest
+    environment:
+      - SSH_KEY=${SSK_KEY}
+    ports:
+      - "1234:22"
+    volumes:
+      - ./data/git/:/home/git/
+      - ./data/ssh/:/etc/ssh/
