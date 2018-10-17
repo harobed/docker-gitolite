@@ -3,7 +3,7 @@ services:
   gitolite:
     image: harobed/gitolite:latest
     environment:
-      - SSH_KEY=${SSK_KEY}
+      - SSH_KEY=${SSH_KEY}
     ports:
       - "1234:22"
     volumes:
